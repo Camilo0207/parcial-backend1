@@ -15,7 +15,7 @@ spring:
     virtual-host: /
   queue:
     persona:
-      name: PracticaQueue
+      name: practicaQueue
 
 eureka:
   instance:
