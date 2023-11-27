@@ -13,9 +13,10 @@ spring:
     username: guest
     password: guest
     virtual-host: /
-  queue:
-    persona:
-      name: practicaQueue
+    
+queue:
+  persona:
+    name: practicaQueue
 
 eureka:
   instance:
