@@ -1,6 +1,9 @@
+# Configuración del Servidor
 server:
   port: ${PORT:${SERVER_PORT:0}}
 idRandom: ${random.value}
+
+# Configuración de Spring
 spring:
   application:
     name: movie-service
@@ -12,7 +15,8 @@ spring:
     port: 5672                   # Puerto del servidor RabbitMQ (por defecto es 5672)
     username: guest              # Nombre de usuario de RabbitMQ
     password: guest              # Contraseña de RabbitMQ
-    virtual-host: /    
+    virtual-host: /
+
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/movie-dev
@@ -22,10 +26,13 @@ spring:
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
-  queue:
-      persona:
-        name: practicaQueue
 
+# Configuración de la Cola (Queue)
+queue:
+  persona:
+    name: practicaQueue
+
+# Configuración de Eureka
 eureka:
   instance:
     hostname: localhost
