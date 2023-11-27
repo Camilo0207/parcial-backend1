@@ -13,7 +13,9 @@ spring:
     username: guest              # Nombre de usuario de RabbitMQ
     password: guest              # Contraseña de RabbitMQ
     virtual-host: /    
-    
+  queue:
+    persona:
+      name: PracticaQueue
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/movie-dev
