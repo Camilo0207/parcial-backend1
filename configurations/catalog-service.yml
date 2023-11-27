@@ -13,6 +13,11 @@ spring:
     username: guest              # Nombre de usuario de RabbitMQ
     password: guest              # Contraseña de RabbitMQ
     virtual-host: /    
+
+  queue:
+    persona:
+      name: PracticaQueue
+
 eureka:
   instance:
     hostname: localhost
