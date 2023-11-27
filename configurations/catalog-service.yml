@@ -1,6 +1,8 @@
+# Configuración del Servidor y Spring
 server:
   port: ${PORT:${SERVER_PORT:0}}
 idRandom: ${random.value}
+
 spring:
   application:
     name: catalog-service
@@ -13,10 +15,13 @@ spring:
     username: guest
     password: guest
     virtual-host: /
-  queue:
-    persona:
-      name: practicaQueue
 
+# Configuración de Cola (Queue)
+queue:
+  persona:
+    name: practicaQueue
+
+# Configuración de Eureka
 eureka:
   instance:
     hostname: localhost
@@ -26,6 +31,8 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+# Configuración de Actuadores y Salud (Management)
 management:
   endpoints:
     web:
@@ -40,6 +47,7 @@ management:
     health:
       show-details: always
 
+# Configuración de Resilience4j (Circuit Breaker y Retry)
 resilience4j:
   circuitbreaker:
     instances:
